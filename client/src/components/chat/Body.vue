@@ -26,10 +26,8 @@ const handleLeaveChat = (): void => {
     </button>
   </header>
 
-  <!-- This shows messages sent from you -->
   <div class="message__container">
     <div class="message__chats" v-for="message in props.messages" :key="message.id">
-      {{ message }}
       <template v-if="message.name === userName">
         <p class="sender__name">You</p>
         <div class="message__sender">
